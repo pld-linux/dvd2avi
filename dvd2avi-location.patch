@@ -1,0 +1,11 @@
+--- dvd2avi	2006-06-19 13:27:10.000000000 +0200
++++ dvd2avi-new	2006-06-19 17:48:11.041313360 +0200
+@@ -13,7 +13,7 @@
+ use vars qw($main_window_xml $progress_window_xml %widgets %params @titles @chapters @audios @hideitems @cdsize @cdlabel @mp3_methods);
+ 
+ # M A I N   W I N D O W
+-$main_window_xml = Gtk2::GladeXML->new('dvd2avi.glade','main_window');
++$main_window_xml = Gtk2::GladeXML->new('/usr/share/dvd2avi/dvd2avi.glade','main_window');
+ $main_window_xml->signal_autoconnect('connect_callback');
+ 
+ # seznam pouzitych widgetu
