@@ -1,5 +1,5 @@
 --- dvd2avi	2006-06-19 13:27:10.000000000 +0200
-+++ dvd2avi-new	2006-06-19 17:48:11.041313360 +0200
++++ dvd2avi-new	2006-06-19 18:15:23.758102680 +0200
 @@ -13,7 +13,7 @@
  use vars qw($main_window_xml $progress_window_xml %widgets %params @titles @chapters @audios @hideitems @cdsize @cdlabel @mp3_methods);
  
@@ -9,3 +9,30 @@
  $main_window_xml->signal_autoconnect('connect_callback');
  
  # seznam pouzitych widgetu
+@@ -391,7 +391,7 @@
+ }
+ 
+ sub on_input_button_clicked { # otevri DVD filechooser
+-	my $open_folder_filechooser_xml = Gtk2::GladeXML->new('dvd2avi.glade','open_folder_filechooser');
++	my $open_folder_filechooser_xml = Gtk2::GladeXML->new('/usr/share/dvd2avi/dvd2avi.glade','open_folder_filechooser');
+ 	$open_folder_filechooser_xml->signal_autoconnect('connect_callback');
+ 	$widgets{'open_folder_filechooser'} = $open_folder_filechooser_xml->get_widget('open_folder_filechooser');
+ 	$widgets{'open_folder_filechooser'}->run;
+@@ -597,7 +597,7 @@
+ sub on_run_btn_clicked { # kikni na RUN, dej dohromady CMD a pust ho graficky
+ 	$params{'run_broken'} = false;
+ 	$params{'shutdown'} = false;
+-	$progress_window_xml = Gtk2::GladeXML->new('dvd2avi.glade','progress_window');
++	$progress_window_xml = Gtk2::GladeXML->new('/usr/share/dvd2avi/dvd2avi.glade','progress_window');
+ 	$progress_window_xml->signal_autoconnect('connect_callback');
+ 	$widgets{'progress_window'} = $progress_window_xml->get_widget('progress_window');
+ 	$widgets{'progressbar'} = $progress_window_xml->get_widget('progressbar');
+@@ -642,7 +642,7 @@
+ 
+ sub open_save_fs { # obecna metoda pro otevreni ukladaciho dialogu,
+ 	$params{'save_fs_id'} = shift;
+-	my $save_fs_xml = Gtk2::GladeXML->new('dvd2avi.glade','save_fs');
++	my $save_fs_xml = Gtk2::GladeXML->new('/usr/share/dvd2avi/dvd2avi.glade','save_fs');
+ 	$save_fs_xml->signal_autoconnect('connect_callback');
+ 	$widgets{'save_fs'} = $save_fs_xml->get_widget('save_fs');
+ 	$widgets{'save_fs'}->run;
