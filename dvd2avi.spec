@@ -6,7 +6,7 @@ Version:	0.7
 %define	_ver	%{nil}
 Release:	2
 License:	GPL
-Group:		Applications
+Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/sourceforge/dvd2avi/%{name}-%{version}%{_ver}.tgz
 # Source0-md5:	f296a360f41d4c06a2d60e2a7529f47f
 Source1:	%{name}.desktop
