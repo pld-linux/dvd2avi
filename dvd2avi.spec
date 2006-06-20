@@ -4,11 +4,12 @@ Summary(pl):	dvd2avi - narzêdzie do konwersji
 Name:		dvd2avi
 Version:	0.7
 %define	_ver	%{nil}
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications
 Source0:	http://dl.sourceforge.net/sourceforge/dvd2avi/%{name}-%{version}%{_ver}.tgz
 # Source0-md5:	f296a360f41d4c06a2d60e2a7529f47f
+Source1:	%{name}.desktop
 Patch0:		%{name}-location.patch
 URL:		http://dvd2avi.sourceforge.net/
 Requires:	perl
@@ -31,10 +32,11 @@ DVD2AVI sprawia, ¿e konwersja z DVD do AVI staje siê lekka jak morska bryza.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{perl_vendorarch},%{_datadir}/dvd2avi}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{perl_vendorarch},%{_datadir}/dvd2avi,%{_desktopdir}}
 install dvd2avi $RPM_BUILD_ROOT%{_bindir}/dvd2avi
 install functions.pm $RPM_BUILD_ROOT%{perl_vendorarch}/functions.pm
 install dvd2avi.glade $RPM_BUILD_ROOT%{_datadir}/dvd2avi/dvd2avi.glade
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -46,3 +48,4 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/functions.pm
 %dir %{_datadir}/dvd2avi
 %{_datadir}/dvd2avi/dvd2avi.glade
+%{_desktopdir}/dvd2avi.desktop
