@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=dvd2avi
+Comment=DVD to AVI konwerter 
+Comment[pl]=Narzêdzie do konwersji DVD do AVI
+Exec=dvd2avi
+Terminal=false
+MultipleArgs=false
+Type=Application
+Encoding=UTF-8
+Categories=GTK;Multimedia;
