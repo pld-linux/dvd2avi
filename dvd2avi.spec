@@ -2,13 +2,13 @@ Summary:	dvd2avi - conversion tool
 Summary(de):	dvd2avi - ein konversions Tool
 Summary(pl):	dvd2avi - narzêdzie do konwersji
 Name:		dvd2avi
-Version:	0.6
-%define	_ver	4
+Version:	0.7
+%define	_ver	%{nil}
 Release:	1
 License:	GPL
 Group:		Applications
-Source0:	http://dl.sourceforge.net/sourceforge/dvd2avi/%{name}-%{version}-%{_ver}.tgz
-# Source0-md5:	0184bc58d91280731dfe60e2110c01e8
+Source0:	http://dl.sourceforge.net/sourceforge/dvd2avi/%{name}-%{version}%{_ver}.tgz
+# Source0-md5:	f296a360f41d4c06a2d60e2a7529f47f
 Patch0:		%{name}-location.patch
 URL:		http://dvd2avi.sourceforge.net/
 Requires:	perl
