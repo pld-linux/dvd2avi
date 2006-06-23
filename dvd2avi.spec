@@ -12,7 +12,6 @@ Source0:	http://dl.sourceforge.net/sourceforge/dvd2avi/%{name}-%{version}%{_ver}
 Source1:	%{name}.desktop
 Patch0:		%{name}-location.patch
 URL:		http://dvd2avi.sourceforge.net/
-Requires:	perl
 Requires:	perl-Gtk2
 Requires:	perl-Gtk2-GladeXML
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -21,10 +20,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 DVD2AVI makes conversion of DVDs to AVIs a real breeze.
 
 %description -l de
-DVD2AVI macht eine konversion von einer DVD zum AVI Format zum Kinderspiel.
+DVD2AVI macht eine konversion von einer DVD zum AVI Format zum
+Kinderspiel.
 
 %description -l pl
-DVD2AVI sprawia, ¿e konwersja z DVD do AVI staje siê lekka jak morska bryza.
+DVD2AVI sprawia, ¿e konwersja z DVD do AVI staje siê lekka jak morska
+bryza.
 
 %prep
 %setup -q -n %{name}
