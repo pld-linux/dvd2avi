@@ -1,3 +1,5 @@
+# TODO: don't put functions.pm in perl_vendorlib
+%include	/usr/lib/rpm/macros.perl
 Summary:	dvd2avi - conversion tool
 Summary(de):	dvd2avi - ein konversions Tool
 Summary(pl):	dvd2avi - narzêdzie do konwersji
@@ -7,13 +9,12 @@ Version:	0.7
 Release:	2
 License:	GPL
 Group:		X11/Applications
-Source0:	http://dl.sourceforge.net/sourceforge/dvd2avi/%{name}-%{version}%{_ver}.tgz
+Source0:	http://dl.sourceforge.net/dvd2avi/%{name}-%{version}%{_ver}.tgz
 # Source0-md5:	f296a360f41d4c06a2d60e2a7529f47f
 Source1:	%{name}.desktop
 Patch0:		%{name}-location.patch
 URL:		http://dvd2avi.sourceforge.net/
-Requires:	perl-Gtk2
-Requires:	perl-Gtk2-GladeXML
+BuildRequires:	rpm-perlprov
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
