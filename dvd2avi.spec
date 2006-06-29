@@ -5,12 +5,12 @@ Summary(de):	dvd2avi - ein konversions Tool
 Summary(pl):	dvd2avi - narzêdzie do konwersji
 Name:		dvd2avi
 Version:	0.7
-%define	_ver	%{nil}
-Release:	2
+%define	_ver	-3
+Release:	3
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/dvd2avi/%{name}-%{version}%{_ver}.tgz
-# Source0-md5:	f296a360f41d4c06a2d60e2a7529f47f
+# Source0-md5:	fa7550ecfe8b184500f69147ba3995a5
 Source1:	%{name}.desktop
 Patch0:		%{name}-location.patch
 URL:		http://dvd2avi.sourceforge.net/
@@ -29,7 +29,7 @@ DVD2AVI sprawia, ¿e konwersja z DVD do AVI staje siê lekka jak morska
 bryza.
 
 %prep
-%setup -q -n %{name}
+%setup -q -n opt/%{name}
 %patch0 -p0
 
 %install
