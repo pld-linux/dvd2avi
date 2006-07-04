@@ -1,15 +1,17 @@
 # TODO: don't put functions.pm in perl_vendorlib
 %include	/usr/lib/rpm/macros.perl
+%define		_mainver	0.7
+%define		_subver	.5
+%define		_ver	%(echo %{_subver} |sed s/./-/)
 Summary:	dvd2avi - conversion tool
 Summary(de):	dvd2avi - ein konversions Tool
 Summary(pl):	dvd2avi - narzêdzie do konwersji
 Name:		dvd2avi
-Version:	0.7
-%define	_ver	-5
-Release:	4
+Version:	%{_mainver}%{_subver}
+Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://dl.sourceforge.net/dvd2avi/%{name}-%{version}%{_ver}.tgz
+Source0:	http://dl.sourceforge.net/dvd2avi/%{name}-%{_mainver}%{_ver}.tgz
 # Source0-md5:	26ecb079c5ee49a4025c3a1323b2daa6
 Source1:	%{name}.desktop
 Patch0:		%{name}-location.patch
