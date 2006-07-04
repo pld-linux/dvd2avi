@@ -2,7 +2,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define		_mainver	0.7
 %define		_subver	.5
-%define		_ver	%(echo %{_subver} |sed s/./-/)
+%define		_ver	%(echo %{_subver} |tr . -)
 Summary:	dvd2avi - conversion tool
 Summary(de):	dvd2avi - ein konversions Tool
 Summary(pl):	dvd2avi - narzêdzie do konwersji
