@@ -1,5 +1,5 @@
---- dvd2avi	2006-06-19 13:27:10.000000000 +0200
-+++ dvd2avi-new	2006-06-19 18:15:23.758102680 +0200
+--- dvd2avi.pl	2006-06-19 13:27:10.000000000 +0200
++++ dvd2avi.pl-new	2006-06-19 18:15:23.758102680 +0200
 @@ -13,7 +13,7 @@
  use vars qw($main_window_xml $progress_window_xml %widgets %params @titles @chapters @audios @hideitems @cdsize @cdlabel @mp3_methods);
  
