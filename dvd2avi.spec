@@ -1,7 +1,7 @@
 # TODO: don't put functions.pm in perl_vendorlib
 %include	/usr/lib/rpm/macros.perl
 %define		_mainver	0.7
-%define		_subver	.7
+%define		_subver	.9
 %define		_ver	%(echo %{_subver} |tr . -)
 Summary:	dvd2avi - conversion tool
 Summary(de):	dvd2avi - ein konversions Tool
@@ -12,7 +12,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/dvd2avi/%{name}-%{_mainver}%{_ver}.tgz
-# Source0-md5:	4cf2bdc0a72718d9127ec408c875f85c
+# Source0-md5:	a8e464ec8ffd02919ba2956ccf53ac68
 Source1:	%{name}.desktop
 Patch0:		%{name}-location.patch
 URL:		http://dvd2avi.sourceforge.net/
@@ -37,7 +37,7 @@ bryza.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{perl_vendorarch},%{_datadir}/dvd2avi,%{_desktopdir}}
-install dvd2avi $RPM_BUILD_ROOT%{_bindir}/dvd2avi
+install dvd2avi.pl $RPM_BUILD_ROOT%{_bindir}/dvd2avi
 install functions.pm $RPM_BUILD_ROOT%{perl_vendorarch}/functions.pm
 install dvd2avi.glade $RPM_BUILD_ROOT%{_datadir}/dvd2avi/dvd2avi.glade
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
