@@ -1,12 +1,13 @@
---- dvd2avi.pl.orig	2006-07-18 09:54:09.000000000 +0200
-+++ dvd2avi.pl	2006-10-25 15:03:40.828045784 +0200
-@@ -1,4 +1,4 @@
--#!/usr/bin/perl
-+#!/usr/bin/perl -I/usr/share/dvd2avi
- # (C) Tomas Bazant, Cesky rozhlas, 2006
+--- dvd2avi.pl	2006-07-18 09:54:09.000000000 +0200
++++ dvd2avi.pl-new	2006-10-25 15:22:42.506484280 +0200
+@@ -7,13 +7,13 @@
+ use strict;
+ use constant true => 1;
+ use constant false => 0;
+-use functions;
++use Dvd2avi::Functions;
  
- use Data::Dumper;
-@@ -13,7 +13,7 @@
+ # globalni promenne: '%widget' obsahje vsechny widgety a '%params' vsechny udaje pro samotne enkodovani
  use vars qw($main_window_xml $progress_window_xml %widgets %params @titles @f_titles @chapters @audios @hideitems @cdsize @cdlabel @mp3_methods);
  
  # M A I N   W I N D O W
