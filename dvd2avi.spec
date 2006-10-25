@@ -7,7 +7,7 @@ Summary(de):	dvd2avi - ein konversions Tool
 Summary(pl):	dvd2avi - narzêdzie do konwersji
 Name:		dvd2avi
 Version:	%{_mainver}%{_subver}
-Release:	2
+Release:	2.1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/dvd2avi/%{name}-%{_mainver}%{_ver}.tgz
@@ -35,9 +35,9 @@ bryza.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{perl_vendorarch},%{_datadir}/dvd2avi,%{_desktopdir}}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{perl_vendorarch}/Dvd2avi,%{_datadir}/dvd2avi,%{_desktopdir}}
 install dvd2avi.pl $RPM_BUILD_ROOT%{_bindir}/dvd2avi
-install functions.pm $RPM_BUILD_ROOT%{_datadir}/dvd2avi/functions.pm
+install functions.pm $RPM_BUILD_ROOT%{perl_vendorarch}/Dvd2avi/Functions.pm
 install dvd2avi.glade $RPM_BUILD_ROOT%{_datadir}/dvd2avi/dvd2avi.glade
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
@@ -48,6 +48,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README INSTALL
 %attr(755,root,root) %{_bindir}/dvd2avi
+%dir %{perl_vendorarch}/Dvd2avi
+%{perl_vendorarch}/Dvd2avi
 %dir %{_datadir}/dvd2avi
 %{_datadir}/dvd2avi
 %{_desktopdir}/dvd2avi.desktop
