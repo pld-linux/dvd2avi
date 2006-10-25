@@ -49,7 +49,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc README INSTALL
 %attr(755,root,root) %{_bindir}/dvd2avi
 %dir %{perl_vendorarch}/Dvd2avi
-%{perl_vendorarch}/Dvd2avi
+%{perl_vendorarch}/Dvd2avi/*
 %dir %{_datadir}/dvd2avi
-%{_datadir}/dvd2avi
+%{_datadir}/dvd2avi/*
 %{_desktopdir}/dvd2avi.desktop
