@@ -3,8 +3,8 @@
 %define		_subver	.9
 %define		_ver	%(echo %{_subver} |tr . -)
 Summary:	dvd2avi - conversion tool
-Summary(de):	dvd2avi - ein konversions Tool
-Summary(pl):	dvd2avi - narzêdzie do konwersji
+Summary(de.UTF-8):   dvd2avi - ein konversions Tool
+Summary(pl.UTF-8):   dvd2avi - narzÄ™dzie do konwersji
 Name:		dvd2avi
 Version:	%{_mainver}%{_subver}
 Release:	2.1
@@ -21,12 +21,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 DVD2AVI makes conversion of DVDs to AVIs a real breeze.
 
-%description -l de
+%description -l de.UTF-8
 DVD2AVI macht eine konversion von einer DVD zum AVI Format zum
 Kinderspiel.
 
-%description -l pl
-DVD2AVI sprawia, ¿e konwersja z DVD do AVI staje siê lekka jak morska
+%description -l pl.UTF-8
+DVD2AVI sprawia, Å¼e konwersja z DVD do AVI staje siÄ™ lekka jak morska
 bryza.
 
 %prep
