@@ -3,8 +3,8 @@
 %define		_subver	.9
 %define		_ver	%(echo %{_subver} |tr . -)
 Summary:	dvd2avi - conversion tool
-Summary(de.UTF-8):   dvd2avi - ein konversions Tool
-Summary(pl.UTF-8):   dvd2avi - narzędzie do konwersji
+Summary(de.UTF-8):	dvd2avi - ein konversions Tool
+Summary(pl.UTF-8):	dvd2avi - narzędzie do konwersji
 Name:		dvd2avi
 Version:	%{_mainver}%{_subver}
 Release:	2.1
