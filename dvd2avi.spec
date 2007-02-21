@@ -7,7 +7,7 @@ Summary(de.UTF-8):	dvd2avi - ein konversions Tool
 Summary(pl.UTF-8):	dvd2avi - narzędzie do konwersji
 Name:		dvd2avi
 Version:	%{_mainver}%{_subver}
-Release:	2.1
+Release:	2.2
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/dvd2avi/%{name}-%{_mainver}%{_ver}.tgz
@@ -16,6 +16,8 @@ Source1:	%{name}.desktop
 Patch0:		%{name}-location.patch
 URL:		http://dvd2avi.sourceforge.net/
 BuildRequires:	rpm-perlprov
+Requires:	lsdvd
+Requires:	mencoder
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
