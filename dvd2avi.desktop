@@ -6,5 +6,4 @@ Exec=dvd2avi
 Terminal=false
 MultipleArgs=false
 Type=Application
-Encoding=UTF-8
 Categories=GTK;KDE;Audio;
