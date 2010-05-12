@@ -6,4 +6,4 @@ Exec=dvd2avi
 Terminal=false
 MultipleArgs=false
 Type=Application
-Categories=GTK;KDE;Audio;
+Categories=GTK;KDE;Audio;AudioVideo;AudioVideoEditing;
