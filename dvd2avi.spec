@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.perl
 %define		_mainver	0.7
 %define		_subver	.9
 %define		_ver	%(echo %{_subver} |tr . -)
